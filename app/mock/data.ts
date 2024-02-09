@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+import { fa, faker } from '@faker-js/faker';
 
 export const images = [
     '/img/c1.avif',
@@ -11,8 +11,8 @@ export const homeItems = [
         title: 'Exploring Maui',
         type: 'Blog',
         text: 'We just got back from a trip to Maui, and we had a great time...',
-        author: 'Max Lynch',
-        authorAvatar:  faker.image.avatar(),
+        author: faker.person.fullName(),
+        authorAvatar: faker.image.avatar(),
         image: images[0],
     },
     {
@@ -20,7 +20,7 @@ export const homeItems = [
         type: 'Blog',
         text:
             'Last month we took a trek to the Arctic Circle. The isolation was just what we needed after...',
-        author: 'Max Lynch',
+        author: faker.person.fullName(),
         authorAvatar: faker.image.avatar(),
         image: images[1],
     },
@@ -29,10 +29,19 @@ export const homeItems = [
         type: 'Blog',
         text:
             'The Faroe Islands are a North Atlantic archipelago located 320 kilometres (200 mi) north-northwest of Scotland...',
-        author: 'Max Lynch',
+        author: faker.person.fullName(),
         authorAvatar: faker.image.avatar(),
         image: images[2],
     },
+    {
+        title: 'A Week in the Woods',
+        type: 'Blog',
+        text:
+            'We just got back from a week in the woods. We had a great time, but I’m so glad to be back...',
+        author: faker.person.fullName(),
+        authorAvatar: faker.image.avatar(),
+        image: faker.image.urlPicsumPhotos({ blur: 4, grayscale: true }),
+    }
 ];
 
 export const notifications = [
