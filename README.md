@@ -35,6 +35,20 @@ This project was inspired by [Max Lynch's Next.js + Tailwind CSS + Ionic Framewo
     npm install
     ```
 
+3. **Add platforms**:
+    To add iOS and Android platforms to your project:
+    ```bash
+    npx cap add ios
+    npx cap add android
+    ```
+    This step requires Xcode for iOS and Android Studio for Android development.
+
+4. **Install Android Studio** (for Android development):
+    To run and test your app on an Android emulator, [download and install Android Studio](https://developer.android.com/studio). During installation, ensure you include the Android SDK and configure it as per the installation instructions.
+
+5. **Install Xcode** (for iOS development on Mac):
+    To run and test your app on an iOS simulator, download and install Xcode from the Mac App Store. After installation, open Xcode to install additional required components when prompted. Xcode includes the iOS Simulator where you can run your iOS apps.
+
 ### Development
 
 Start the development server with:
@@ -55,8 +69,9 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'com.example.app',
   appName: 'nextjs-typescript-tailwind-ionic-starter',
-  webDir: "build",
+  cordova: {},
   loggingBehavior: "debug",
+  webDir: "out",
   plugins: {
     SplashScreen: {
       launchShowDuration: 0
@@ -67,8 +82,8 @@ const config: CapacitorConfig = {
     hostname: 'localhost:3000',
   },
   android: {
-    loggingBehavior: "debug",
-    webContentsDebuggingEnabled: true,
+     loggingBehavior: "debug",
+     webContentsDebuggingEnabled: true,
   }
 };
 
