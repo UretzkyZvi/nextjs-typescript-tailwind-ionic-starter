@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'nextjs-typescript-tailwind-ionic-starter',
   cordova: {},
   loggingBehavior: "debug",
-  webDir: "build",
+  webDir: "out",
   plugins: {
     SplashScreen: {
       launchShowDuration: 0
@@ -19,7 +19,6 @@ const config: CapacitorConfig = {
      loggingBehavior: "debug",
      webContentsDebuggingEnabled: true,
   }
-  
 };
 
 export default config;

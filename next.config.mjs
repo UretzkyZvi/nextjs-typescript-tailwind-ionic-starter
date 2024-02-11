@@ -2,8 +2,7 @@
 const nextConfig = {
     basePath: '',
     transpilePackages: ['@ionic/react', '@ionic/core',  'ionicons'],
-    distDir: 'build',
-    output:'export',
+    output:'export',   
 };
 
 export default nextConfig;
