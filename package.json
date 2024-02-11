@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build ",
+    "build": "next build",
+    "build:dev": "next build --no-lint",
     "start": "next start  --experimental-https",
-    "lint": "next lint"
+    "lint": "next lint",
+    "start:android": "npm run build:dev && npx cap sync && npx cap run android",
+    "start:ios": "npm run build:dev && npx cap sync && npx cap run ios",
+    "open:android": "npm run build && npx cap sync && npx cap copy android && npx cap open android",
+    "open:ios": "npm run build && npx cap sync && npx cap copy ios && npx cap open ios"
   },
   "dependencies": {
     "@capacitor/android": "^5.7.0",
