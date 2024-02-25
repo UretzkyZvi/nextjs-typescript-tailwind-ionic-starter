@@ -26,7 +26,7 @@ This project was inspired by [Max Lynch's Next.js + Tailwind CSS + Ionic Framewo
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository-url> <project-directory>
+    git clone https://github.com/UretzkyZvi/nextjs-typescript-tailwind-ionic-starter.git <project-directory>
     ```
 
 2. **Install dependencies**:
